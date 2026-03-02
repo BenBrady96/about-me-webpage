@@ -119,4 +119,3 @@ MIT — see [LICENSE](LICENSE) for details.
 
 - **GitHub** — [BenBrady96](https://github.com/BenBrady96)
 - **LinkedIn** — [ben-brady-b241642b4](https://www.linkedin.com/in/ben-brady-b241642b4/)
-- **Location** — England, United Kingdom
