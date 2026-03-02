@@ -35,8 +35,9 @@ const projects = [
         ],
         tags: ['Python', 'Google Gemini API', 'FFLogs GraphQL API', 'Discord.py'],
         url: 'https://github.com/BenBrady96/discord-fflogs-ai-raid-reporter',
-        demoType: 'image',
-        demoSrc: null,
+        liveUrl: 'https://www.youtube.com/watch?v=sjbn3MEzjg4',
+        demoType: 'youtube',
+        youtubeId: 'sjbn3MEzjg4',
     },
     {
         icon: '🔥',

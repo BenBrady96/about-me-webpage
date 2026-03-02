@@ -14,7 +14,7 @@ export default function Hero() {
                 <p className="hero-greeting">Hi there, I'm</p>
                 <h1 className="hero-name">Ben Brady</h1>
                 <p className="hero-tagline">
-                    Business Analyst &bull; Software Engineer &bull; AI Integrator
+                    Software Engineer &bull; Business Analyst &bull; AI Integrator
                 </p>
                 <div className="hero-buttons">
                     <a
