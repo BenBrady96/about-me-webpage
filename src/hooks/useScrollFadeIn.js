@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function useScrollFadeIn() {
+  const observerRef = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -20,9 +22,29 @@ export default function useScrollFadeIn() {
       }
     );
 
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach((el) => observer.observe(el));
+    observerRef.current = observer;
 
-    return () => observer.disconnect();
+    const observe = () => {
+      const elements = document.querySelectorAll('.fade-in:not(.visible)');
+      elements.forEach((el) => observer.observe(el));
+    };
+
+    // Initial observation
+    observe();
+
+    // Re-observe when new content may have loaded (e.g. iframes causing reflow)
+    const mutationObserver = new MutationObserver(() => {
+      observe();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 }

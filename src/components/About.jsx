@@ -40,8 +40,10 @@ export default function About() {
                         className="highlight-card fade-in"
                         data-delay={150 + i * 100}
                     >
-                        <span className="highlight-icon">{item.icon}</span>
-                        <h3 className="highlight-title">{item.title}</h3>
+                        <div className="highlight-header">
+                            <span className="highlight-icon">{item.icon}</span>
+                            <h3 className="highlight-title">{item.title}</h3>
+                        </div>
                         <p className="highlight-text">{item.text}</p>
                     </div>
                 ))}

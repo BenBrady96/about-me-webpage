@@ -2,10 +2,12 @@
 
 :root {
   --bg-primary: #0a192f;
+  --bg-primary-rgb: 10, 25, 47;
   --bg-secondary: #112240;
   --bg-card: #1a2a4a;
   --accent: #64ffda;
   --accent-glow: rgba(100, 255, 218, 0.15);
+  --accent-rgb: 100, 255, 218;
   --text-primary: #ccd6f6;
   --text-secondary: #8892b0;
   --text-white: #e6f1ff;
@@ -16,7 +18,28 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*, *::before, *::after {
+/* Light mode */
+[data-theme="light"] {
+  --bg-primary: #f8f9fc;
+  --bg-primary-rgb: 248, 249, 252;
+  --bg-secondary: #ffffff;
+  --bg-card: #f0f2f8;
+  --text-primary: #4a5568;
+  --text-secondary: #718096;
+  --text-white: #1a202c;
+}
+
+[data-theme="light"] a:hover {
+  filter: brightness(0.8);
+}
+
+[data-theme="light"] ::selection {
+  color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,9 +58,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-white);
   line-height: 1.2;
@@ -47,10 +76,6 @@ a {
   color: var(--accent);
   text-decoration: none;
   transition: var(--transition);
-}
-
-a:hover {
-  color: #a8fff0;
 }
 
 ::selection {
@@ -87,7 +112,7 @@ a:hover {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in.visible {
@@ -117,6 +142,7 @@ a:hover {
   .section {
     padding: 60px 20px;
   }
+
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 32px;

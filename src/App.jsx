@@ -3,6 +3,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Navbar from './components/Navbar';
 import useScrollFadeIn from './hooks/useScrollFadeIn';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
 
   return (
     <>
+      <Navbar />
       <Hero />
       <About />
       <Skills />

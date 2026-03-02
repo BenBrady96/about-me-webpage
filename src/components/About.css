@@ -8,7 +8,7 @@
 
 .about-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
@@ -45,17 +45,31 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
+.highlight-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
 .highlight-icon {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-    display: block;
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(var(--accent-rgb, 100, 255, 218), 0.1);
+    border: 1px solid rgba(var(--accent-rgb, 100, 255, 218), 0.15);
+    flex-shrink: 0;
 }
 
 .highlight-title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--text-white);
-    margin-bottom: 8px;
+    letter-spacing: 0.3px;
 }
 
 .highlight-text {
