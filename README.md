@@ -117,5 +117,5 @@ MIT - see [LICENSE](LICENSE) for details.
 
 ## 📧 Contact
 
-**Github** - [GitHub](https://github.com/BenBrady96)
-**LinkedIn** - [ben-brady-b241642b4](https://www.linkedin.com/in/ben-brady-b241642b4/)
+- [GitHub](https://github.com/BenBrady96)
+- [LinkedIn](https://www.linkedin.com/in/ben-brady-b241642b4/)
