@@ -154,7 +154,7 @@ function ProjectDemo({ project }) {
                     src={project.demoSrc}
                     title={`${project.title} demo`}
                     loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
+                    sandbox="allow-scripts"
                 />
                 <div className="project-demo-overlay">
                     <a
