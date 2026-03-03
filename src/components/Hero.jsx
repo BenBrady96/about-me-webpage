@@ -43,7 +43,9 @@ export default function Hero() {
             </div>
             <div className="hero-scroll-indicator">
                 <span>Scroll</span>
-                <div className="arrow"></div>
+                <div className="hero-scroll-arrow">
+                    <div className="arrow"></div>
+                </div>
             </div>
         </section>
     );

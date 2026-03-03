@@ -1,4 +1,5 @@
 import './About.css';
+import Timeline from './Timeline';
 
 const highlights = [
     {
@@ -48,6 +49,7 @@ export default function About() {
                     </div>
                 ))}
             </div>
+            <Timeline />
         </section>
     );
 }
