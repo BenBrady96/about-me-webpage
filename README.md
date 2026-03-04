@@ -2,9 +2,9 @@
 
 A professional personal portfolio webpage showcasing my projects, career history, and tech stack — built with React & Vite, featuring a dynamic theme system and live project demos.
 
-**[🌐 View Live Site →](https://benbrady96.github.io/about-me-webpage/)**
-
-React Vite JavaScript License
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -22,6 +22,12 @@ React Vite JavaScript License
 
 ---
 
+## 📜 Live Demo
+
+[![About Me Webpage Showcase](src/assets/About%20Me%20Webpage%20Showcase.png)](https://benbrady96.github.io/about-me-webpage/)
+
+---
+
 ## 🖥️ Sections
 
 | Section | Description |
@@ -31,7 +37,7 @@ React Vite JavaScript License
 | **About** | Professional summary with 2×2 highlight cards (automation, cost savings, AI, analytics) |
 | **Career Timeline** | Vertical timeline of 3 roles with company logos — Zencargo, Travis Perkins, Ladbrokes Coral |
 | **Skills** | 2×2 tech stack grid with Devicon icons across Languages, AI & Automation, Front-End / UI, and Tools & Infrastructure |
-| **Projects** | 6 full-width project showcases with live iframe demos, YouTube video embeds, feature lists, and tech tags |
+| **Projects** | 7 full-width project showcases with live iframe demos, YouTube video embeds, feature lists, and tech tags |
 | **Contact** | Footer with social links and location |
 
 ---
@@ -40,6 +46,7 @@ React Vite JavaScript License
 
 | Project | Description | Demo |
 |---------|-------------|------|
+| [📄 Invoice Generator](https://github.com/BenBrady96/invoice-generator) | Professional client-side PDF invoice generator with 6 premium templates | [🔗 Live](https://benbrady96.github.io/invoice-generator/) |
 | [🤖 Agentic Discord Admin](https://github.com/BenBrady96/agentic-discord-admin) | Autonomous Discord admin bot with ReAct agentic loop | [▶ YouTube](https://www.youtube.com/watch?v=BwE0c9SxiMs) |
 | [📊 Discord AI Raid Reporter](https://github.com/BenBrady96/discord-fflogs-ai-raid-reporter) | AI-powered raid performance reports from FFLogs | [▶ YouTube](https://www.youtube.com/watch?v=sjbn3MEzjg4) |
 | [🔥 React Fire Embers](https://github.com/BenBrady96/react-fire-embers) | Mesmerising fire particle effect — pure CSS keyframes | [🔗 Live](https://benbrady96.github.io/react-fire-embers/) |

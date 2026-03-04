@@ -3,6 +3,27 @@ import './Projects.css';
 
 const projects = [
     {
+        icon: '📄',
+        title: 'Invoice Generator',
+        description:
+            'A professional, client-side PDF invoice generator built with React and Vite. Features 6 premium templates, automatic multi-page pagination, and fully private local storage — no sign-up or server required.',
+        features: [
+            '6 premium templates — Classic, Modern, Minimal, Bold, Professional, Creative',
+            'WYSIWYG PDF export — what you see is exactly what you get',
+            'Company logo upload with drag-and-drop support',
+            'Browser persistence — company profile saved to localStorage',
+            'Smart multi-page pagination with automatic page numbers',
+            'Multi-currency support — GBP, USD, EUR, JPY, INR, AUD, CAD',
+            'Auto-calculated subtotal, tax, and grand total in real-time',
+            'Fully client-side — no server, no database, no tracking',
+        ],
+        tags: ['React', 'Vite', 'JavaScript', 'CSS', 'html2canvas', 'jsPDF', 'localStorage'],
+        url: 'https://github.com/BenBrady96/invoice-generator',
+        liveUrl: 'https://benbrady96.github.io/invoice-generator/',
+        demoType: 'iframe',
+        demoSrc: 'https://benbrady96.github.io/invoice-generator/',
+    },
+    {
         icon: '🤖',
         title: 'Agentic Discord Admin',
         description:
