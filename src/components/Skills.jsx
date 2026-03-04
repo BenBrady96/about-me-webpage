@@ -1,6 +1,7 @@
 import './Skills.css';
 
 const allProjects = {
+    invoiceGen: { name: 'Invoice Generator', url: 'https://github.com/BenBrady96/invoice-generator' },
     agenticAdmin: { name: 'Agentic Discord Admin', url: 'https://github.com/BenBrady96/agentic-discord-admin' },
     raidReporter: { name: 'Discord AI Raid Reporter', url: 'https://github.com/BenBrady96/discord-fflogs-ai-raid-reporter' },
     fireEmbers: { name: 'React Fire Embers', url: 'https://github.com/BenBrady96/react-fire-embers' },
@@ -10,9 +11,9 @@ const allProjects = {
 };
 
 const p = allProjects;
-const allSix = [p.agenticAdmin, p.raidReporter, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
+const allSeven = [p.invoiceGen, p.agenticAdmin, p.raidReporter, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
 const bothBots = [p.agenticAdmin, p.raidReporter];
-const allReact = [p.fireEmbers, p.starfield, p.snowfall, p.snowman];
+const allReact = [p.invoiceGen, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
 
 const categories = [
     {
@@ -52,7 +53,7 @@ const categories = [
             {
                 name: 'CSS3',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-                projects: [p.fireEmbers, p.snowfall, p.snowman],
+                projects: [p.invoiceGen, p.fireEmbers, p.snowfall, p.snowman],
             },
         ],
     },
@@ -120,7 +121,7 @@ const categories = [
             {
                 name: 'Git / GitHub',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-                projects: allSix,
+                projects: allSeven,
             },
             {
                 name: 'Docker',
