@@ -1,8 +1,10 @@
+import ParticleNetwork from './ParticleNetwork';
 import './Hero.css';
 
 export default function Hero() {
     return (
         <section className="hero" id="hero">
+            <ParticleNetwork />
             <div className="hero-content">
                 <div className="hero-avatar-wrapper">
                     <img
