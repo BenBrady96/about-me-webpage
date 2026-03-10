@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://benbrady96.github.io/about-me-webpage/",
+  "homepage": "https://benbrady96.is-a.dev",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
