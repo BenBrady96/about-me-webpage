@@ -1,4 +1,4 @@
-# 💻 Ben Brady — Personal Portfolio
+# 💻 Ben Brady - Personal Portfolio
 
 A professional personal portfolio webpage showcasing my projects, career history, and tech stack — built with React & Vite, featuring a dynamic theme system and live project demos.
 
@@ -11,6 +11,7 @@ A professional personal portfolio webpage showcasing my projects, career history
 ## ✨ Features
 
 - 🎨 **Dynamic Theme System** — Toggle between dark and light mode with 5 accent colour palettes (Teal, Purple, Blue, Orange, Pink), persisted to `localStorage`
+- 🌟 **Interactive Particle Hero** — Custom HTML5 Canvas particle network that dynamically matches the active theme and repels away from the user's cursor
 - 🧭 **Sticky Navigation** — Glassmorphism navbar with section links, palette switcher dots, and responsive mobile hamburger menu
 - 📜 **Scroll Fade-In Animations** — Sections and cards elegantly fade into view as you scroll, powered by `IntersectionObserver` with `MutationObserver` re-observation
 - 📱 **Fully Responsive** — Optimised for desktop, tablet, and mobile viewports
@@ -24,7 +25,7 @@ A professional personal portfolio webpage showcasing my projects, career history
 
 ## 📜 Live Demo
 
-[![About Me Webpage Showcase](src/assets/About%20Me%20Webpage%20Showcase.png)](https://benbrady96.github.io/about-me-webpage/)
+[![About Me Webpage Showcase](src/assets/About%20Me%20Webpage%20Showcase.png)](https://benbrady96.is-a.dev/)
 
 ---
 
