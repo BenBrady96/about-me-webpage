@@ -23,10 +23,26 @@ export default function ParticleNetwork() {
         };
         const particleColorRgb = currentPalette.accentRgb || hexToRgb(currentPalette.accent);
 
+        let lastWidth = 0;
+        let lastHeight = 0;
+
         const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            initParticles();
+            const currentWidth = window.innerWidth;
+            const currentHeight = window.innerHeight;
+
+            if (canvas.width !== currentWidth || canvas.height !== currentHeight) {
+                canvas.width = currentWidth;
+                canvas.height = currentHeight;
+            }
+
+            // On mobile, scrolling hides/shows the address bar, firing a resize event and changing innerHeight slightly.
+            // To prevent resetting the particles on every scroll, only re-init if the width changes 
+            // (orientation change / window size) or if the height changes significantly (>150px)
+            if (currentWidth !== lastWidth || Math.abs(currentHeight - lastHeight) > 150) {
+                lastWidth = currentWidth;
+                lastHeight = currentHeight;
+                initParticles();
+            }
         };
 
         class Particle {
