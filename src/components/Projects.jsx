@@ -3,6 +3,26 @@ import './Projects.css';
 
 const projects = [
     {
+        icon: '💬',
+        title: 'SimuChat',
+        description:
+            'A secure, microservices-based AI Chat platform featuring 6 legendary Final Fantasy personas. Powered by Google Gemini. Built with Kotlin (Ktor), React, and PostgreSQL. Features robust security hardening, anti-jailbreak guardrails, and full IaC/K3s orchestration.',
+        features: [
+            '6 AI characters with detailed system prompts and anti-prompt-injection guardrails',
+            'Kotlin/Ktor REST API with JWT authentication and BCrypt password hashing',
+            'React + Bootstrap 5 SPA with Axios JWT interceptor',
+            'PostgreSQL database with Exposed ORM and HikariCP connection pooling',
+            '29 automated tests — auth flows, IDOR/BOLA, SQL injection, XSS, and timing attacks',
+            'Full IaC with Terraform (GCP) and Kubernetes (K3s) deployment manifests',
+            'Dockerised multi-stage builds with Nginx reverse proxy and security headers',
+        ],
+        tags: ['Kotlin', 'Ktor', 'React', 'PostgreSQL', 'Google Gemini API', 'Docker', 'Terraform', 'Kubernetes', 'Nginx', 'JWT'],
+        url: 'https://github.com/BenBrady96/SimuChat',
+        liveUrl: 'https://youtu.be/GAD_lCMx0NA',
+        demoType: 'youtube',
+        youtubeId: 'GAD_lCMx0NA',
+    },
+    {
         icon: '📄',
         title: 'Invoice Generator',
         description:
@@ -185,6 +205,29 @@ function ProjectDemo({ project }) {
                         className="project-demo-link"
                     >
                         🔗 Live Demo
+                    </a>
+                </div>
+            </div>
+        );
+    }
+
+    if (project.demoType === 'image') {
+        return (
+            <div className="project-demo">
+                <img
+                    src={project.imageSrc}
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', top: 0, left: 0, background: 'var(--bg-secondary, #0a0a1a)' }}
+                />
+                <div className="project-demo-overlay">
+                    <a
+                        href={project.liveUrl || project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-demo-link"
+                    >
+                        {project.liveUrl ? '🔗 Live Demo' : '📂 View Code'}
                     </a>
                 </div>
             </div>

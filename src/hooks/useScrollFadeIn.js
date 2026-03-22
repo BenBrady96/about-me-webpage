@@ -4,17 +4,22 @@ export default function useScrollFadeIn() {
   const observerRef = useRef(null);
 
   useEffect(() => {
+    const observed = new WeakSet();
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        for (let i = 0; i < entries.length; i++) {
+          const entry = entries[i];
           if (entry.isIntersecting) {
             const delay = entry.target.dataset.delay || 0;
-            setTimeout(() => {
+            if (delay > 0) {
+              setTimeout(() => entry.target.classList.add('visible'), Number(delay));
+            } else {
               entry.target.classList.add('visible');
-            }, Number(delay));
+            }
             observer.unobserve(entry.target);
           }
-        });
+        }
       },
       {
         threshold: 0.1,
@@ -24,17 +29,24 @@ export default function useScrollFadeIn() {
 
     observerRef.current = observer;
 
-    const observe = () => {
+    const observeNew = () => {
       const elements = document.querySelectorAll('.fade-in:not(.visible)');
-      elements.forEach((el) => observer.observe(el));
+      for (let i = 0; i < elements.length; i++) {
+        if (!observed.has(elements[i])) {
+          observed.add(elements[i]);
+          observer.observe(elements[i]);
+        }
+      }
     };
 
     // Initial observation
-    observe();
+    observeNew();
 
-    // Re-observe when new content may have loaded (e.g. iframes causing reflow)
+    // Debounced re-scan for dynamically added elements
+    let debounceTimer = null;
     const mutationObserver = new MutationObserver(() => {
-      observe();
+      if (debounceTimer) clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(observeNew, 200);
     });
 
     mutationObserver.observe(document.body, {
@@ -45,6 +57,7 @@ export default function useScrollFadeIn() {
     return () => {
       observer.disconnect();
       mutationObserver.disconnect();
+      if (debounceTimer) clearTimeout(debounceTimer);
     };
   }, []);
 }
