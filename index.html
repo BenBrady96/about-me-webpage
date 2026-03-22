@@ -11,10 +11,38 @@
   <meta property="og:description"
     content="Software Engineer, Business Analyst & AI Integrator. Explore my projects in automation, AI, and full-stack development." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+  <link id="favicon" rel="icon" type="image/png" href="https://avatars.githubusercontent.com/BenBrady96" />
+  <script>
+    (function () {
+      var link = document.getElementById('favicon');
+      var avatarUrl = 'https://avatars.githubusercontent.com/BenBrady96';
+      var img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = function () {
+        try {
+          var size = 64;
+          var canvas = document.createElement('canvas');
+          canvas.width = size;
+          canvas.height = size;
+          var ctx = canvas.getContext('2d');
+          ctx.beginPath();
+          ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(img, 0, 0, size, size);
+          link.href = canvas.toDataURL('image/png');
+        } catch (e) {
+          link.href = avatarUrl;
+        }
+      };
+      img.onerror = function () {
+        link.href = avatarUrl;
+      };
+      img.src = avatarUrl;
+    })();
+  </script>
   <title>Ben Brady's Portfolio</title>
-  <script type="module" crossorigin src="/assets/index-BgBZAroL.js"></script>
+  <script type="module" crossorigin src="/assets/index-DjcD6NwJ.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-Bj66Kpnp.css">
 </head>
 
