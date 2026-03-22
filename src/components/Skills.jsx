@@ -1,6 +1,7 @@
 import './Skills.css';
 
 const allProjects = {
+    simuChat: { name: 'SimuChat', url: 'https://github.com/BenBrady96/SimuChat' },
     invoiceGen: { name: 'Invoice Generator', url: 'https://github.com/BenBrady96/invoice-generator' },
     agenticAdmin: { name: 'Agentic Discord Admin', url: 'https://github.com/BenBrady96/agentic-discord-admin' },
     raidReporter: { name: 'Discord AI Raid Reporter', url: 'https://github.com/BenBrady96/discord-fflogs-ai-raid-reporter' },
@@ -11,9 +12,9 @@ const allProjects = {
 };
 
 const p = allProjects;
-const allSeven = [p.invoiceGen, p.agenticAdmin, p.raidReporter, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
-const bothBots = [p.agenticAdmin, p.raidReporter];
-const allReact = [p.invoiceGen, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
+const allEight = [p.simuChat, p.invoiceGen, p.agenticAdmin, p.raidReporter, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
+const aiProjects = [p.simuChat, p.agenticAdmin, p.raidReporter];
+const allReact = [p.simuChat, p.invoiceGen, p.fireEmbers, p.starfield, p.snowfall, p.snowman];
 
 const categories = [
     {
@@ -23,7 +24,7 @@ const categories = [
             {
                 name: 'Python',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-                projects: bothBots,
+                projects: [p.agenticAdmin, p.raidReporter],
             },
             {
                 name: 'JavaScript',
@@ -33,7 +34,7 @@ const categories = [
             {
                 name: 'Kotlin',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg',
-                projects: [],
+                projects: [p.simuChat],
             },
             {
                 name: 'C#',
@@ -43,7 +44,7 @@ const categories = [
             {
                 name: 'SQL',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg',
-                projects: [p.agenticAdmin],
+                projects: [p.simuChat, p.agenticAdmin],
             },
             {
                 name: 'HTML5',
@@ -53,7 +54,7 @@ const categories = [
             {
                 name: 'CSS3',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-                projects: [p.invoiceGen, p.fireEmbers, p.snowfall, p.snowman],
+                projects: [p.simuChat, p.invoiceGen, p.fireEmbers, p.snowfall, p.snowman],
             },
         ],
     },
@@ -64,13 +65,13 @@ const categories = [
             {
                 name: 'Google Gemini API',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
-                projects: bothBots,
+                projects: aiProjects,
             },
             {
                 name: 'Generative AI',
                 devicon: null,
                 emoji: '🧠',
-                projects: bothBots,
+                projects: aiProjects,
             },
             {
                 name: 'ReAct Agentic Loop',
@@ -82,7 +83,7 @@ const categories = [
                 name: 'LLM Prompt Engineering',
                 devicon: null,
                 emoji: '💬',
-                projects: bothBots,
+                projects: aiProjects,
             },
         ],
     },
@@ -110,7 +111,7 @@ const categories = [
             {
                 name: 'Bootstrap',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-                projects: [],
+                projects: [p.simuChat],
             },
         ],
     },
@@ -121,17 +122,17 @@ const categories = [
             {
                 name: 'Git / GitHub',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-                projects: allSeven,
+                projects: allEight,
             },
             {
                 name: 'Docker',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-                projects: [],
+                projects: [p.simuChat],
             },
             {
                 name: 'Kubernetes',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg',
-                projects: [],
+                projects: [p.simuChat],
             },
             {
                 name: 'Linux / Ubuntu',
@@ -141,17 +142,37 @@ const categories = [
             {
                 name: 'Google Cloud (GCP)',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
-                projects: [],
+                projects: [p.simuChat],
             },
             {
                 name: 'Python venv',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-                projects: bothBots,
+                projects: [p.agenticAdmin, p.raidReporter],
             },
             {
                 name: 'SQLite',
                 devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
                 projects: [p.agenticAdmin],
+            },
+            {
+                name: 'PostgreSQL',
+                devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+                projects: [p.simuChat],
+            },
+            {
+                name: 'Nginx',
+                devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+                projects: [p.simuChat],
+            },
+            {
+                name: 'Terraform',
+                devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
+                projects: [p.simuChat],
+            },
+            {
+                name: 'Gradle',
+                devicon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg',
+                projects: [p.simuChat],
             },
         ],
     },
